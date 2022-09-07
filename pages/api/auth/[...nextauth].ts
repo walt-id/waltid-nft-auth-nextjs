@@ -1,5 +1,5 @@
 import NextAuth, { NextAuthOptions } from 'next-auth';
-import NFTProvider from '../../../lib/test';
+import NFTProvider from '../../../lib/nft-provider';
 
 // For more information on each option (and a full list of options) go to
 // https://next-auth.js.org/configuration/options
