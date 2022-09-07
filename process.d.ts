@@ -12,7 +12,7 @@ declare namespace NodeJS {
     GOOGLE_SECRET: string;
     AUTH0_ID: string;
     AUTH0_SECRET: string;
-    WALTID_ID: string;
-    WALTID_SECRET: string;
+    CLIENT_ID: string;
+    CLIENT_SECRET: string;
   }
 }

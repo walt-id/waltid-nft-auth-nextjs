@@ -6,8 +6,8 @@ import NFTProvider from '../../../lib/nft-provider';
 export const authOptions: NextAuthOptions = {
   providers: [
     NFTProvider(
-      'YCg7_9h9U5uo23yGDZ-Q5DLVXo-MdRwIzTbJnLaFaRs',
-      'CT1thprVKEGvFxZfNeySteChA2PwBaFCksfxXy0UjgI',
+      process.env.CLIENT_ID,
+      process.env.CLIENT_SECRET,
       'http:localhost:8080'
     ),
   ],
