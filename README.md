@@ -1,27 +1,16 @@
-# Next.js + Tailwind CSS Example
+## Login with NFT build with Next.js and NextAuth.js
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+Let your users authenticate in a Next.js app with NFTs from a specified collection or with specific traits.
+The login requests and the validation of the NFTs is handled by the IDP Kit, an open-source product by walt.id.
+NextAuth.js is used as an authentication solution for Next.js. It builds on the OIDC standards and can therefore
+be easily configured to work with the IDP Kit.
 
-## Deploy your own
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## Usage
+1. Set up the IDP Kit, either [locally](https://docs.walt.id/v/idpkit/getting-started/cli) or use a hosed solution.
+2. Register a client with the IDP Kits CLI or the API exposed.
+3. Update the `CLIENT_ID` and `CLIENT_SECRET` environment variables based on the response received from the client
+registration
+4. In `pages/api/auth/[...nextauth].ts` update the `identityProviderURL` parameter of the NFTProvider
+depending on where you host the IDP Kit.
+5. Run the project in development mode with `yarn dev` or build it with `yarn build` and run it with `yarn start`
