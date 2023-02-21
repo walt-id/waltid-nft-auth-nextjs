@@ -25,6 +25,7 @@ const NFTProvider = (
       params: {
         scope: `openid nft_token`,
         response_type: 'code',
+        //claims: "{\"nft_token\":{\"chain\":\"MUMBAI\",\"smartContractAddress\":\"0xf277BE034881eE38A9b270E5b6C5c6f333Af2517\"}}"
       },
     },
     idToken: false,

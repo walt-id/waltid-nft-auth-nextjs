@@ -6,7 +6,6 @@ import Button from './Button';
 // rendering, and avoids any flash incorrect content on initial page load.
 export default function Header() {
   const { data: session, status } = useSession();
-  console.log(session?.id);
   const loading = status === 'loading';
 
   return (
