@@ -8,7 +8,7 @@ export const authOptions: NextAuthOptions = {
     NFTProvider(
       process.env.CLIENT_ID,
       process.env.CLIENT_SECRET,
-      'http:localhost:8080'
+      'https://idp.walt-test.cloud'
     ),
   ],
   theme: {
