@@ -18,6 +18,7 @@ spec:
       containers:
         - name: waltidnftauth
           image: waltid/waltidnftauth:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
               name: http-port
