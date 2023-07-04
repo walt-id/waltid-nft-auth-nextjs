@@ -6,19 +6,26 @@ import Button from './Button';
 // rendering, and avoids any flash incorrect content on initial page load.
 export default function Header() {
   const { data: session, status } = useSession();
-  console.log(session?.id);
-  const loading = status === 'loading';
+  const subjectNode = (
+    <>
+      <span>{session?.sub}</span>
+    </>
+  );
+
+  const nameNode = <span>{session?.user?.name}</span>;
 
   return (
     <header>
       <div className="with-full bg-gray-200">
-        <div className="w-6/12 m-auto flex justify-between p-4">
+        <div className="w-6/12 h-22 m-auto flex justify-between p-4">
           {!session ? (
             <p>You are not authenticated</p>
           ) : (
             <div>
               <p>You are signed in as:</p>
-              <span>{session?.user?.name}</span>
+              {session?.user?.name && nameNode}
+              {session?.user?.name && session?.sub && <> | </>}
+              {session?.sub && subjectNode}
             </div>
           )}
           {session?.user && (
