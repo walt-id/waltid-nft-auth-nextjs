@@ -1,3 +1,12 @@
+## 🚨 Repository Moved
+
+> [!IMPORTANT]
+> This repository is no longer maintained.
+> 
+> All walt.id development continues in the monorepo:
+> 
+### 👉 Code **https://github.com/walt-id/waltid-identity** & Docs **https://docs.walt.id**
+
 ## Login with NFT or SSI build with Next.js and NextAuth.js
 
 Let your users authenticate in a Next.js app with NFTs from a specified collection or with specific traits or with SSI, their Verifiable Credential or DID.
